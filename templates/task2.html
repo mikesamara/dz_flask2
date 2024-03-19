@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+{% block content%}
+<form action="/" method="post">
+    <input type="number" name="num_1" placeholder="Введите первое число">
+
+    <select id="selectvalue" name="operation" >
+         <option value="">-- Выберите операцию--</option>
+        <option value="+">Сложение +</option>
+
+        <option value="-">Вычитание -</option>
+
+        <option value="*">Умножение *</option>
+
+        <option value="/">Деление /</option>
+
+
+    </select>
+    <input type="number" name="num_2" placeholder="Введите второе число">
+    <input type="submit" value="отправить">
+</form>
+{% endblock %} }
